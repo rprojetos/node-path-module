@@ -8,7 +8,28 @@ Faz parte do núcleo do Node.js, sendo necessário apenas importar e usar:
 
 O `path.sep` desse módulo, provê o caracter separador de segmento de caminho (`\` no Windows, e `/` no Linux / macOS), e o `path.delimiter` que provê o caracter delimitador de caminho (`;` no Windows, e `:` no Linux / macOS).
 
-Os métodos do módulo `path` são:
+## Variáveis e Caminhos do path
+
+[exemplos - index.ts](src/index.ts)
+
+Um caminho absoluto fornece a localização completa desde a raiz do sistema de arquivos, enquanto um caminho relativo indica a localização em relação ao diretório atual ou a um ponto de referência específico.
+
+__dirname: Essa variável contém o diretório do arquivo atual, fornecendo o caminho do diretório onde o arquivo reside.
+
+__filename: Essa variável contém o nome do caminho completo do arquivo atualmente em execução, incluindo o nome do arquivo.
+
+Para construirmos um caminho absoluto relativo, precisamos fornecer a sequência de diretórios e arquivos que leva até o destino desejado.
+
+* O método path.join() nos permite concatenar essas partes para formar o caminho completo
+* O método path.resolve() é usado para resolver caminhos de arquivos ou diretórios em caminhos absolutos.
+
+    
+
+
+
+
+
+## métodos do módulo `path`
 
 ### path.basename()
 
@@ -85,7 +106,6 @@ Ao especificar um segundo parâmetro, o `resolve` vai usar o primeiro como base 
 Se o primeiro parâmetro começar com uma barra, isso significa que é um caminho absoluto:
 
 <pre class="pre"><pre class="prism-code language-javascript pre" p="3"><div class="token-line"><span class="token plain">path</span><span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span><span class="token string">'/etc'</span><span class="token punctuation">,</span><span class="token plain"></span><span class="token string">'pauloluan.txt'</span><span class="token punctuation">)</span><span class="token plain"></span><span class="token comment">// '/etc/pauloluan.txt'</span></div></pre></pre>
-
 
 ## Como usar
 
