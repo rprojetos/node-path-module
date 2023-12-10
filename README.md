@@ -10,8 +10,6 @@ O `path.sep` desse módulo, provê o caracter separador de segmento de caminho (
 
 ## Variáveis e Caminhos do path
 
-[exemplos - index.ts](src/index.ts)
-
 Um caminho absoluto fornece a localização completa desde a raiz do sistema de arquivos, enquanto um caminho relativo indica a localização em relação ao diretório atual ou a um ponto de referência específico.
 
 __dirname: Essa variável contém o diretório do arquivo atual, fornecendo o caminho do diretório onde o arquivo reside.
@@ -20,10 +18,15 @@ __filename: Essa variável contém o nome do caminho completo do arquivo atualme
 
 Para construirmos um caminho absoluto relativo, precisamos fornecer a sequência de diretórios e arquivos que leva até o destino desejado.
 
-* O método path.join() nos permite concatenar essas partes para formar o caminho completo
-* O método path.resolve() é usado para resolver caminhos de arquivos ou diretórios em caminhos absolutos.
+Descrição de alguns métodos:
 
-    
+[Exemplos em [src/index.ts]](src/index.ts)
+
+* path.join() nos permite concatenar essas partes para formar o caminho completo
+* path.resolve() é usado para resolver caminhos de arquivos ou diretórios em caminhos absolutos.
+* path.dirname() essa função retorna o diretório pai de um caminho de arquivo ou diretório final.
+* path.basename() essa função retorna o nome base de um caminho de arquivo. Ela extrai o nome do aquivo ou diretório final do caminho fornecido.
+* path.extname() função usada para obter a extensão de um caminho de arquivo, retornando a parte da string que representa a extensão do arquivo, incluindo o (".") antes da extensão.
 
 
 
